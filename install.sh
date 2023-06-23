@@ -18,8 +18,8 @@ pip3 install qtile
 pip3 install psutil
 
 # Microcode for Intel/AMD 
-# sudo apt install -y amd64-microcode
-sudo apt install -y intel-microcode 
+sudo apt install -y amd64-microcode
+#sudo apt install -y intel-microcode 
 
 # Network Manager
 sudo apt install -y network-manager-gnome
@@ -28,37 +28,39 @@ sudo apt install -y network-manager-gnome
 sudo apt install -y lxappearance 
 
 # File Manager (eg. pcmanfm,krusader,thunar)
-sudo apt install -y thunar
+sudo apt install -y thunar thunar-volman thunar-media-tags-plugin thunar-archive-plugin 
+ xfce4-places-plugin tumbler tumbler-plugins-extra 
 
 # Network File Tools/System Events
-sudo apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends xfce4-power-manager
+sudo apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends #xfce4-power-manager
 
 sudo systemctl enable avahi-daemon
 sudo systemctl enable acpid
 
 # Terminal (eg. terminator,kitty)
-sudo apt install -y xfce4-terminal
+#sudo apt install -y xfce4-terminal
 
 # Sound packages
-sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
+sudo apt install -y pipewire pipewire-bin pipewire-pulse pipewire-jack pipewire-audio pipewire-alsa libwireplumber wireplumber-doc wireplumber
+#sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 
-# Neofetch/HTOP
-sudo apt install -y neofetch
+# Neofetch/HTOP /// TERMINAL GODDIES 
+sudo apt install -y lsd fd silversearcher-ag ripgrep lolcat zoxide ytfzf fzf bat fish duf duff du-dust fastfetch 
 
 # EXA installation
 # replace ls command in .bashrc file with line below
 # alias ls='exa -al --long --header --color=always --group-directories-first' 
-sudo apt install -y exa
+#sudo apt install -y exa
 
 # Printing and bluetooth (if needed)
-sudo apt install -y cups
+#sudo apt install -y cups
 # sudo apt install -y bluez blueman
 
 # sudo systemctl enable bluetooth
 sudo systemctl enable cups
 
 # Browser Installation (eg. chromium)
-sudo apt install -y firefox-esr 
+#sudo apt install -y firefox-esr 
 
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
@@ -67,14 +69,32 @@ sudo apt install -y feh
 # sudo apt install -y nitrogen 
 
 # Packages needed qtile after installation
-sudo apt install -y picom dunst sxhkd rofi suckless-tools libnotify-bin unzip scrot geany geany-plugin-treebrowser
+sudo apt install -y picom dunst notification-daemon rofi libnotify-bin unzip p7zip
 
 # Command line text editor -- nano preinstalled  -- I like micro but vim is great
-sudo apt install -y micro
+sudo apt install -y micro xclip
 # sudo apt install -y neovim
 
 # Install fonts and papirus icon theme and arc-theme
 sudo apt install -y fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus
+
+# MY STUFF 
+sudo apt install -y nala
+sudo nala install -y  flameshot psmisc mangohud bibata-cursor-theme big-cursor 
+sudo nala install -y lm-sensors fancontrol fonts-noto-color-emoji  htop btop caprine
+sudo nala install -y mpv yt-dlp moc ffmpegthumbnailer python3-pil  
+
+git clone https://github.com/alvatip/Nordzy-cursors
+cd Nordzy-cursors
+./install.sh
+cd $builddir
+rm -rf Nordzy-cursors
+
+# DEB_GET WIMPYSWORLD
+sudo nala install curl lsb-release wget
+curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
+
+deb-get install brave-browser code 
 
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
