@@ -47,7 +47,7 @@ sudo apt install -y pipewire pipewire-bin pipewire-pulse pipewire-jack pipewire-
 #sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 
 # Neofetch/HTOP /// TERMINAL GODDIES 
-sudo apt install -y lsd fd silversearcher-ag ripgrep lolcat zoxide ytfzf fzf bat fish duf du-dust fastfetch mlocate cpu-x
+sudo apt install -y lsd fd silversearcher-ag ripgrep lolcat zoxide ytfzf fzf bat fish duf du-dust fastfetch mlocate cpu-x pulsemixer pamixer 
 
 # EXA installation
 # replace ls command in .bashrc file with line below
