@@ -29,7 +29,8 @@ sudo apt install -y lxappearance
 
 # File Manager (eg. pcmanfm,krusader,thunar)
 sudo apt install -y thunar thunar-volman thunar-media-tags-plugin thunar-archive-plugin 
- xfce4-places-plugin tumbler tumbler-plugins-extra 
+
+sudo apt install -y xfce4-places-plugin tumbler tumbler-plugins-extra 
 
 # Network File Tools/System Events
 sudo apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends #xfce4-power-manager
@@ -45,7 +46,7 @@ sudo apt install -y pipewire pipewire-bin pipewire-pulse pipewire-jack pipewire-
 #sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 
 # Neofetch/HTOP /// TERMINAL GODDIES 
-sudo apt install -y lsd fd silversearcher-ag ripgrep lolcat zoxide ytfzf fzf bat fish duf duff du-dust fastfetch 
+sudo apt install -y lsd fd silversearcher-ag ripgrep lolcat zoxide ytfzf fzf bat fish duf du-dust fastfetch mlocate
 
 # EXA installation
 # replace ls command in .bashrc file with line below
@@ -95,6 +96,11 @@ sudo nala install curl lsb-release wget
 curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
 
 deb-get install brave-browser code 
+
+### KERNAL XANMOD 
+wget -qO - https://dl.xanmod.org/archive.key | sudo gpg --dearmor -o /usr/share/keyrings/xanmod-archive-keyring.gpg
+
+echo 'deb [signed-by=/usr/share/keyrings/xanmod-archive-keyring.gpg] http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-release.list
 
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
