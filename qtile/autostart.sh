@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-/etc/xdg/autostart/lxpolkit.desktop &
-#/usr/bin/lxpolkit &
+/usr/bin/lxpolkit &
+/usr/lib/notification-daemon/notification-daemon &
 dunst &
 xdg-user-dirs-update &
 #/etc/xdg/autostart/polkit-gnome-authentication-agent-1.desktop &
@@ -10,8 +10,8 @@ xdg-user-dirs-update &
 feh --randomize --bg-fill /home/dmne/Pictures/background &
 #nitrogen --restore &
 #picom -f &
-picom &
-#picom --experimental-backend &
+#picom &
+picom --experimental-backend &
 #blueberry-tray &
 #blueman-applet &
 #pasystray --notify=all instead &
