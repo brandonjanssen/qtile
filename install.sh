@@ -4,7 +4,7 @@
 # Install packages after installing base Debian with no GUI
 
 # xorg display server installation
-sudo apt install -y xserver-xorg xinit
+sudo apt install -y xserver-xorg xinit xbacklight xbindkeys xvkbd xinput light
 
 # INCLUDES make,etc.
 sudo apt install -y python3-pip 
@@ -22,15 +22,15 @@ sudo apt install -y amd64-microcode
 #sudo apt install -y intel-microcode 
 
 # Network Manager
-sudo apt install -y network-manager-gnome
+sudo apt install -y network-manager network-manager-gnome
 
 # Installation for Appearance management
-sudo apt install -y lxappearance 
+sudo apt install -y lxappearance lxpolkit lxsession-logout
 
 # File Manager (eg. pcmanfm,krusader,thunar)
 sudo apt install -y thunar thunar-volman thunar-media-tags-plugin thunar-archive-plugin 
 
-sudo apt install -y xfce4-places-plugin tumbler tumbler-plugins-extra 
+sudo apt install -y xfce4-places-plugin tumbler tumbler-plugins-extra file-roller
 
 # Network File Tools/System Events
 sudo apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends #xfce4-power-manager
@@ -40,13 +40,14 @@ sudo systemctl enable acpid
 
 # Terminal (eg. terminator,kitty)
 #sudo apt install -y xfce4-terminal
+sudo apt install -y kitty
 
 # Sound packages
 sudo apt install -y pipewire pipewire-bin pipewire-pulse pipewire-jack pipewire-audio pipewire-alsa libwireplumber wireplumber-doc wireplumber
 #sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 
 # Neofetch/HTOP /// TERMINAL GODDIES 
-sudo apt install -y lsd fd silversearcher-ag ripgrep lolcat zoxide ytfzf fzf bat fish duf du-dust fastfetch mlocate
+sudo apt install -y lsd fd silversearcher-ag ripgrep lolcat zoxide ytfzf fzf bat fish duf du-dust fastfetch mlocate cpu-x
 
 # EXA installation
 # replace ls command in .bashrc file with line below
@@ -83,7 +84,7 @@ sudo apt install -y fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-libe
 sudo apt install -y nala
 sudo nala install -y  flameshot psmisc mangohud bibata-cursor-theme big-cursor 
 sudo nala install -y lm-sensors fancontrol fonts-noto-color-emoji  htop btop caprine
-sudo nala install -y mpv yt-dlp moc ffmpegthumbnailer python3-pil  
+sudo nala install -y mpv yt-dlp moc ffmpegthumbnailer python3-pil l3afpad galculator 
 
 git clone https://github.com/alvatip/Nordzy-cursors
 cd Nordzy-cursors
@@ -106,7 +107,7 @@ echo 'deb [signed-by=/usr/share/keyrings/xanmod-archive-keyring.gpg] http://deb.
 xdg-user-dirs-update
 
 # Installing Lightdm
-sudo apt install lightdm -y
+sudo apt install lightdm lightdm-gtk-greeter-settings -y
 sudo systemctl enable lightdm
 
 # Adding qtile.desktop to Lightdm xsessions directory
