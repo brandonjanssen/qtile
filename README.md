@@ -1,7 +1,9 @@
 ```
 sudo apt install git
 
-git clone https://github.com/brandonjanssen/qtile
+git clone https://github.com/brandonjanssen/qtile.git
+
+git clone https://github.com/brandonjanssen/scripts.git
 
 cd qtile
 
