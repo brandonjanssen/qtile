@@ -8,6 +8,4 @@ cd qtile
 ./install.sh (includes nerdfonts.sh unless commented)
 ```
 
-==============================
-
 
