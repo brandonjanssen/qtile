@@ -117,6 +117,6 @@ sudo echo "Exec=/home/$u/.local/bin/qtile start" | sudo tee -a /usr/share/xsessi
 
 
 
-sudo apt autoremove
+sudo nala autoremove
 
 printf "\e[1;32mDone! you can now reboot.\e[0m\n"
